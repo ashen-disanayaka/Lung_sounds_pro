@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+    <link href="./styles.css" rel="stylesheet">
+    <title>Lung sounds classification system</title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+        }
+        
+        .bg {
+            /* The image used */
+            background-image: url("bg.jpg");
+            /* Full height */
+            height: 100%;
+            /* Center and scale the image nicely */
+            background-position: center;
+            background-repeat: repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg w3-padding-64">
+        <div class="w3-panel">
+            <div class="w3-row">
+                <div class="w3-half">
+                    <div class="row w3-margin">
+                        <input type="file" class="w3-button w3-round-xlarge w3-blue w3-block">
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-half w3-center w3-padding">
+                            <button class="w3-button w3-round-xlarge w3-blue w3-block">PREVIEW</button>
+                        </div>
+                        <div class="w3-half w3-center w3-padding">
+                            <button class="w3-button w3-round-xlarge w3-red w3-block">DELETE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-half">.</div>
+            </div>
+            <!-- 2 nd widget start -->
+            <div class="w3-row w3-margin-top w3-border w3-round-xlarge">
+                <div class="w3-row w3-margin">
+                    <div class="w3-third">
+                        <div class="w3-text-white w3-xlarge">Patient's Name</div>
+                    </div>
+                    <div class="w3-twothird">
+                        <input type="text" class="w3-input w3-border">
+                    </div>
+                </div>
+                <div class="w3-row w3-margin">
+                    <div class="w3-third">
+                        <div class="w3-text-white w3-xlarge">Doctor Name</div>
+                    </div>
+                    <div class="w3-twothird">
+                        <input type="text" class="w3-input w3-border">
+                    </div>
+                </div>
+                <div class="w3-row w3-margin">
+                    <div class="w3-third">
+                        <div class="w3-text-white w3-xlarge">Date of Test</div>
+                    </div>
+                    <div class="w3-twothird">
+                        <input type="date" class="w3-input w3-border">
+                    </div>
+                </div>
+                <div class="w3-row w3-margin">
+                    <div class="w3-third">
+                        <div class="w3-text-white w3-xlarge">Output (Lung Sound)</div>
+                    </div>
+                    <div class="w3-twothird">
+                        <input type="text" class="w3-input w3-border" disabled>
+                    </div>
+                </div>
+                <div class="w3-row" style="margin:32px 64px;">
+                    <button class="w3-button w3-blue w3-block w3-round-xlarge">Save Log</button>
+                </div>
+            </div>
+            <!-- 2 nd widget end -->
+        </div>
+
+    </div>
+
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js"></script>
+</body>
+
+</html>
